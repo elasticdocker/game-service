@@ -22,6 +22,7 @@
     "postversion": "git push origin --tags HEAD && npm publish"
   },
   "dependencies": {
+    "aws-sdk": "^2.80.0",
     "body-parser": "^1.15.2",
     "core-js": "^2.4.1",
     "cores": "^0.8.5",
