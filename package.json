@@ -14,7 +14,7 @@
     "clean": "rimraf -rf build && rimraf -rf public",
     "compile": "tsc",
     "doc": "apidoc -i app/api/ -o public/",
-    "build": "npm run clean && npm run compile && npm run doc",
+    "build": "npm run clean && npm run compile",
     "start": "node build/app/server.js",
     "lint": "tslint ./src/**/*.ts -t verbose",
     "patch": "npm version patch",
