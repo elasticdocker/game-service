@@ -1,2 +1,7 @@
 public
 app
+*.log
+*.json
+*.md
+!package.json
+

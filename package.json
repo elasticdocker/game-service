@@ -15,6 +15,7 @@
     "compile": "tsc",
     "doc": "apidoc -i app/api/ -o public/",
     "build": "npm run clean && npm run compile",
+    "watch": "tsc -w",
     "start": "node build/app/server.js",
     "lint": "tslint ./src/**/*.ts -t verbose",
     "patch": "npm version patch",
@@ -27,7 +28,8 @@
     "core-js": "^2.4.1",
     "cores": "^0.8.5",
     "cors": "^2.8.1",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "morgan": "^1.8.2"
   },
   "files": [
     "build",
