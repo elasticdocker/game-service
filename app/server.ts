@@ -3,13 +3,13 @@ import * as http from 'http';
 import * as path from 'path';
 import * as bodyParser from 'body-parser';
 import * as cors from 'cors';
-import {Logger} from './logger'
+import { Logger } from './logger';
 
 // PORT may be set using docker or env setting
 const port: number = process.env.PORT || 3020;
 const logDir: string = process.env.VOLUME_LOG || '.';
 
-Logger.init(logDir,'game-service.log');
+Logger.init(logDir, 'game-service.log');
 
 const app = express();
 const server = http.createServer(app);
@@ -21,14 +21,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(cors());
 
-app.use('/health', (req, res)=>{
-	res.sendStatus(200);
+app.use('/health', (req, res) => {
+	 res.sendStatus(200);
 });
 
-//Add all routes
+// Add all routes
 require('./routes').default(app);
 
-//start server
+// start server
 server.listen(port, () => {
 	console.log(`Server is runnnin on port ${port}`);
 });
